@@ -17,6 +17,13 @@ const SOCIAL_ICONS: Record<string, any> = {
     LinkedIn,
     X,
 };
+
+const linkedInfo = profiles.find(({ network }) => network === "LinkedIn");
+const linkedUrl = linkedInfo?.url;
+
+const printInfo = [email, phone, linkedUrl]
+    .filter(Boolean)
+    .join(" • "); /*Para que no muestre el punto si linkedin o otro esta vacio*/
 ---
 
 <Section>
@@ -28,7 +35,10 @@ const SOCIAL_ICONS: Record<string, any> = {
                 <WorldMap />
                 {city},{region}
             </span>
-            <footer>
+            <footer class="print">
+                {printInfo}
+            </footer>
+            <footer class="no-print">
                 {
                     email && (
                         <a
@@ -86,10 +96,10 @@ const SOCIAL_ICONS: Record<string, any> = {
         gap: 1rem;
     }
 
-    .info{
+    .info {
         display: flex;
         flex-direction: column;
-        gap:0.5rem;
+        gap: 0.5rem;
         padding-right: 32px;
     }
 
@@ -111,16 +121,18 @@ const SOCIAL_ICONS: Record<string, any> = {
         border-radius: 16px;
     }
 
-    span{
+    span {
         color: #666;
         display: flex;
         align-items: center;
-        gap:.25rem;
+        gap: 0.25rem;
         font-size: 0.85rem;
         letter-spacing: -0.05rem;
     }
 
-    footer{
+    footer {
+        color: #555;
+        font-size: 0.65rem;
         display: flex;
         gap: 4px;
         margin-top: 8px;
@@ -132,16 +144,16 @@ const SOCIAL_ICONS: Record<string, any> = {
         align-items: center;
         justify-content: center;
         border: 1px solid #eee;
-        padding:4px ;
+        padding: 4px;
         height: 32px;
         width: 32px;
         border-radius: 6px;
-        transition: all .3s ease;
+        transition: all 0.3s ease;
     }
 
-    footer a:hover{
+    footer a:hover {
         background: #eee;
-        border:1px solid #ddd;
+        border: 1px solid #ddd;
         color: #000;
     }
 </style>
