@@ -16,15 +16,15 @@ Basado en el diseño de <a href="https://github.com/BartoszJarocki/cv">Bartosz J
 </div>
 
 <div align="center">
-    <a href="#🚀-empezar">
+    <a href="#-empezar">
         Empezar
     </a>
     <span>&nbsp;✦&nbsp;</span>
-    <a href="#🧞-comandos">
+    <a href="#-comandos">
         Comandos
     </a>
     <span>&nbsp;✦&nbsp;</span>
-    <a href="#🔑-licencia">
+    <a href="#-licencia">
         Licencia
     </a>
     <span>&nbsp;✦&nbsp;</span>
