@@ -1,5 +1,5 @@
 ---
-import { basics } from "@cv"
+import { basics } from "@cv";
 
 interface Props {
 	title: string;
@@ -14,7 +14,7 @@ const { image, summary } = basics;
 	<head>
 		<meta charset="UTF-8" />
 		<title>{title}</title>
-		<meta name="description" content={summary}>
+		<meta name="description" content={summary} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
@@ -97,6 +97,14 @@ const { image, summary } = basics;
 
 		.print {
 			display: block !important;
+		}
+
+		astro-dev-toolbar {
+			display: none !important;
+		}
+
+		article {
+			break-inside: avoid;
 		}
 	}
 </style>
