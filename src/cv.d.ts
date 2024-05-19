@@ -1,7 +1,7 @@
 export interface CV {
     basics: Basics
     work: Array<Work>
-    volunter: Array<Volunter>
+    volunteer: Array<Volunteer>
     education: Array<Education>
     awards: Array<Awards>
     certificates: Array<Certificates>
@@ -26,7 +26,7 @@ export interface CV {
   }
   
   interface Location {
-    addres: string
+    address: string
     postalCode: string
     city: string
     countryCode: string
@@ -51,7 +51,7 @@ export interface CV {
   
   type DateStr = `${string}-${string}-${string}`
   
-  interface Volunter {
+  interface Volunteer {
     organization: string
     position: string
     url: string
@@ -92,7 +92,7 @@ export interface CV {
   interface Education {
     institution: string
     url: string
-    area: sring
+    area: string
     studyType: string
     startDate: DateStr
     endDate: DateStr
@@ -102,7 +102,7 @@ export interface CV {
   
   interface Languages {
     language: Language
-    frequency: string
+    fluency: string
   }
   
   type Language =
